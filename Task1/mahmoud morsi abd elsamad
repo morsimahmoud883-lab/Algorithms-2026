@@ -1,0 +1,22 @@
+#بيرتب مصفوفه(Selection Sort)
+def selection_sort(arr):
+    n = len(arr)
+    
+    # نمشي علي المصفوفه كلها
+    for i in range(n - 1):
+        # نفرض ده اصغر عنصر
+        min_index = i
+        
+        #عنصر نبحث عن أصغر 
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        
+        #  swapنعمل 
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    
+    # 
+    return arr
+
+
+#rs)
